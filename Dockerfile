@@ -2,7 +2,7 @@
 # https://hub.docker.com/_/python
 FROM python:3.7-slim
 
-ENV BUCKET_NAME testbucket
+ENV GCP_BUCKET testbucket
 ENV GCP_PROJECT testproject
 ENV GCP_SECRET testsecret
 ENV GCP_KEYFILE /tmp/service_account.json
