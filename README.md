@@ -6,8 +6,11 @@ This version uses GCP's Secrets Manager service to provide more security around 
 You will want to update the following environment variables in the Dockerfile when you build your image or set them in Cloud Run when you launch the container:
 
 GCP_BUCKET - The name of the bucket you will be uploading files to
+
 GCP_PROJECT - The name of your GCP project
+
 GCP_SECRET - The name of the secret used to store the service account key file
+
 GCP_KEYFILE - The path and name to save the key file to (i.e. /tmp/key.json)
 
 Make sure the service account you run the container as in Cloud Run has access to the secret in Secret Manager. It does not have to be the same service account as key file used to upload the file to GCS.
