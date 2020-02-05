@@ -9,7 +9,7 @@ import datetime
 from google.cloud import storage
 
 
-bucketName = os.environ.get['GCP_BUCKET']
+bucketName = os.environ['GCP_BUCKET']
 svckeyfile = os.environ['GCP_KEYFILE']
 client = storage.Client.from_service_account_json(svckeyfile)
 bucket = client.get_bucket(bucketName)
