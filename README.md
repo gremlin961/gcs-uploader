@@ -11,3 +11,7 @@ GCP_SECRET - The name of the secret used to store the service account key file
 GCP_KEYFILE - The path and name to save the key file to (i.e. /tmp/key.json)
 
 Make sure the service account you run the container as in Cloud Run has access to the secret in Secret Manager. It does not have to be the same service account as key file used to upload the file to GCS.
+
+To use this example code, clone the repo to your GCP cloud shell and update the 4 OS variables in the Dockerfile. To build the image, run the following command, replacing "PROJECT_ID" with name of your project.
+
+docker build -t gcr.io/$PROJECT_ID/uploader . && docker push gcr.io/$PROJECT_ID/uploader:latest
