@@ -2,9 +2,9 @@
 # https://hub.docker.com/_/python
 FROM python:3.7-slim
 
-ENV BUCKET_NAME rkiles-devtest
-ENV GCP_PROJECT rkiles-devtest
-ENV GCP_SECRET downloader
+ENV BUCKET_NAME testbucket
+ENV GCP_PROJECT testproject
+ENV GCP_SECRET testsecret
 ENV GCP_KEYFILE /tmp/service_account.json
 
 # Copy local code to the container image.
