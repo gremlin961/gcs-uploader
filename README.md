@@ -18,3 +18,7 @@ Make sure the service account you run the container as in Cloud Run has access t
 To use this example code, clone the repo to your GCP cloud shell and update the 4 OS variables in the Dockerfile. To build the image, run the following command, replacing "PROJECT_ID" with name of your project.
 
 docker build -t gcr.io/$PROJECT_ID/uploader . && docker push gcr.io/$PROJECT_ID/uploader:latest
+
+Also run the following command to apply the needed CORS policy to your bucket, replacing $BUCKET_NAME with the name of the GCS bucket you will be uploading to:
+
+gsutil cors set cors.txt gs://$BUCKET_NAME
